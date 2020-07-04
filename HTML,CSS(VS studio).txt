@@ -1,0 +1,468 @@
+=>Visual studio
+
+-(!)HTML short cut	
+-short copy by json format	
+-Live server extension
+
+=>META
+
+-<meta name="description" content="this is description">
+-<meta name="keywords" content="html,web devlopment,python">
+-<meta name="robots" content="INDEX,FOLLOW">
+
+=>Bottom side bar remove by commandpallte "toggle word wrap"
+
+=>ctrl + enter make newline in vs code
+
+=><a href="ggogle.com" target="_blank">go to google</a>
+
+=> tabel <thead> and <tbody> <tr> <td>
+
+=>name=""  main for POST request(database)
+
+=> <label for="name">name</label>
+        <input type="email" name="email" id="name">
+   placeholder=""
+
+=>vs code p.classname p#idname
+   p.class2.class1.class3.class4*4
+
+=>Html Entity visit website
+
+=>empty character in html "&#8203;"
+
+=>semantic 
+
+=><style> p{color:red; !important} make high priority
+
+=>web safe fonts p{font-family:"arial","calibri";}
+
+=>font-family,font-size,line-height,font-style,font-weight
+
+=>"border-radius" curve border
+
+=>box-sizing:border-box;note:never change in width
+
+=>margin:auto;
+
+=>float:left; width:68%;
+  clear:both;
+=>text-align:right/left/center/justify;
+
+=>a:hover{},a:active{},a:visited{},cursor:pointer;,text-decoration: none;
+=>list-style:none;  overflow:auto;
+=><header><nav>ul-li-a</nav></header>
+=>display:block;
+=>display:inline;
+=>display:inline-block;
+=>CSS Position RElative(take normal) VS Absolute(take parents)
+=>Position "fixed" very use ful right,left,top,bottom
+=>Position "sticky" menu use ful right,left,top,bottom
+=>z-index display:none visiblity:hidden
+ #box-1{ 
+            position: relative;
+            top: 49px;
+            z-index: -35;
+            background-color: green;        }
+        #box-2{  
+            position: relative;
+            top: 14px;
+            /* z-index  will work only for position: relative, absolute, fixed or sticky; 
+            more the value visible in web*/
+            z-index: -15;
+            /* will hide the element and the space */
+            /* display: none;  */
+            /* will hide the element but will show its empty space */
+            /* visibility:hidden;  */
+            background-color: red;        
+            }
+=>Flex main topic
+  <style>
+        .container{
+            height: 544px; 
+            width: 100%;
+            border: 2px solid black;
+            display: flex; /* Initialize the container as a flex box */
+            
+            /* Flex properties for a flex container */
+
+            /* flex-direction: row; (Default value of flex-direction is row) */
+            /* flex-direction: column;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse; */
+            
+
+            /* flex-wrap: wrap; (Default value of flex-direction is no-wrap) */
+            /* flex-wrap: wrap-reverse; */
+
+            /* This is a shorthand for flex-direction: and flex-wrap: ;; */
+            /* flex-flow: row-reverse wrap; */ 
+
+            /* justify-content will justify the content in horizontal direction */
+            /* justify-content: center; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            /* justify-content: space-around; */
+
+            /* justify-content will justify the content in vertical direction */
+            /* align-items: center; */
+            /* align-items: flex-end; */
+            /* align-items: flex-start; */
+            /* align-items: stretch; */ 
+        }
+        .item{
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            border: 2px solid green;
+            margin: 10px;
+            padding: 3px;
+        }
+
+        #item-1{
+            /* Flex properties for a flex item */
+            /* Higher the order, later it shows up in the container */
+            /* order: 2; */
+
+            /* flex-grow: 2;
+            flex-shrink: 2; */
+
+        }
+        #item-2{
+            /* flex-grow: 3;
+            flex-shrink: 3 ; */
+            flex-basis: 160px;
+            /* when flex-direction is set to row flex-basis: will control width */
+            /* when flex-direction is set to column flex-basis: will control height */
+        }
+        #item-3{
+            /* flex: 2 2 230px; */
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: center;
+
+            }
+
+    </style>
+</head>
+<body>
+    <h1>This is Flexbox Tutorial</h1>
+    <div class="container">
+        <div class="item" id="item-1">First Box</div>
+        <div class="item" id="item-2">Second Box</div>
+        <div class="item" id="item-3">Third Box</div>
+
+=>em(parents node) vs rem(html inherit)
+=>height:100vh;//take full height of view
+=>width:100vw;
+=>""Media Quries"
+   @media only screen (min-width:300px) and (max-width:500px){
+    .box1{
+          display:block;
+          }
+        }
+-------------Selectors In Css-----------------------------
+=>div li p{}//div->li->p
+=>div > p //div(parents) after direct child is a p
+=>div + p//div(siblings) after p
+=>remeber:"align center we must need item is block
+  display:block;width:90px;margin:auto;
+=>input[type="text"]{}
+=>a[target]{}//a[target="__self"]{}
+=>li:nth-child(3){}//li:nth-child(2n+0){}
+=>li:nth-child(even){}//li:nth-child(odd){}
+=>section::after{content:""}//before
+............................................................
+=>background:url("") no-repeat center center/cover;
+-------------background technique---------------------------
+header::before{
+            background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+............................................................
+=>"box-shadow" and "text-shadow"
+........................Css Variables..............................
+:root{
+            --danger_color:black;
+        }
+p{
+   color:var(--danger_color);
+}
+
+--------------------------Css Animation-----------------------------------------
+box {
+        background-color: green;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        /* animation-name: harry1; */
+        animation-name: harry2;
+        animation-duration: 8s;
+        animation-iteration-count: 1;
+        /* animation-fill-mode: alternate; */
+        /* animation-timing-function: ease-in-out; */
+        /* animation-delay: 3s; */
+        /* animation-direction: reverse;  */
+
+        /* These properties can be set using this shorthand */
+        /* animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-fill-mode; */
+        /* animation: harry 5s ease-in 1s 12 backwards; */
+
+    }
+
+    @keyframes harry2 {
+        0%{
+            top:0px;
+            left:0px;
+        }
+        25%{
+            top: 250px;
+            left: 0px;
+        }
+        75%{
+            top: 250px;
+            left: 250px;
+        }
+        100%{
+            top: 0px;
+            left: 250px;
+        }
+        
+    }
+    @keyframes harry1 {
+        from {
+            width: 200px;
+        }
+
+        to {
+            width: 1400px;
+        }
+    }
+------------------------------Css transition-transform Property---------------------------------------
+ .box{
+        display: flex;
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        justify-content: center;
+        align-items: center;
+        /* transition-property: background-color;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 2s; */
+
+        /* Transition short hand property in one line */
+        /* transition: background-color 1s ease-in-out 2s; */
+
+        
+        transition: all 1s ease-in-out .3s;
+        } 
+        .box:hover{
+	background-color: green;
+        height: 400px;
+        width: 400px;
+        border-radius: 100px;
+        font-size: 45px;
+            /* transform: rotate(360deg); */
+            /* transform: skew(40deg); */
+            /* transform: scale(2); */
+            /* transform: translateX(123px); */
+            /* transform: translateY(123px); */
+            transform: translate(123px, 123px);
+
+        }
+-------------------------Css Grid--------------------------------------------------
+           ->grid intro
+  .container{
+        display: grid;
+        /* grid-template-columns: 300px 100px 100px; */
+        /* grid-template-columns: 300px auto 100px; */
+        /* grid-template-columns: 1fr 4fr 1fr; */
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 2rem;
+	
+        grid-template-rows: 1fr 1fr 4fr;
+        grid-auto-rows: 2fr;
+        grid-template-columns: repeat(4, 2fr);
+        grid-gap: 1rem;
+    }
+    .item{
+        /* height: 100px;
+        width: 100px; */
+        background-color: red;
+        border: 2px solid black;
+        padding: 15px 5px;
+    }
+
+------------------GRID Spanning------------------------------
+ .container{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        /* grid-column-gap: 7rem;
+        grid-row-gap: 1rem; */
+        grid-gap: 1rem;
+        
+
+    }
+    .box{
+        border: 2px solid black;
+        background-color: rgb(228, 188, 228);
+        padding: 23px;
+    }
+    .box:first-child{
+        /* grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3; */
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 3;
+    }
+-------------CSS Grid: Autofit & MinMax--------------------
+<style>
+        .container{ 
+            display: grid; 
+            grid-gap: 1rem;
+            /* grid-template-columns: 112px 112px 112px;  */
+            /* grid-template-columns: 1fr 1fr 1fr;  */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* justify-content: center;  */
+        }
+        .box{
+            border: 2px solid black;
+            background-color: rgb(245, 187, 101);
+            padding: 34px; 
+        }
+    </style>
+--------------------CSS Grid: Creating Layouts Using Grid Template Area----------
+<style>
+    .container{
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 
+        'navbar navbar navbar navbar' 
+        'section section section aside'
+        'footer footer footer footer ';
+    }
+    .item{
+        background-color: yellow;
+        border: 3px solid black;
+        padding: 12px 23px;
+    }
+    #navbar{
+        grid-area: navbar;
+    }
+    #section{
+        grid-area: section;
+    }
+    #aside{
+        grid-area: aside;
+    }
+   footer{
+        grid-area: footer;
+    }
+    </style>
+--------------------------Using Media Queries with CSS Grid----------------
+.container {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer ';
+    }
+
+    @media only screen and (max-width:300px) {
+        body {
+            background-color: red;
+        }
+        .container {
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'footer footer footer footer ';
+        }
+        aside{
+            display: none;
+        }
+        span{
+            display: block;
+            text-align: center;
+        }
+    }
+
+    @media only screen and (min-width: 300px) and (max-width:500px) {
+        body {
+            background-color: blue;
+        }
+        .container {
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'footer footer footer footer ';
+        }
+        aside{
+            display: none;
+        }
+        span{
+            display: block;
+            text-align: center;
+        }
+    }
+
+    @media (min-width: 500px) and (max-width:800px) {
+        body {
+            background-color: yellow;
+        }
+
+        .container {
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'footer footer footer footer ';
+        }
+        span{
+            display: block;
+            text-align: center;
+        }
+    }
+
+    @media (min-width: 800px) {
+        body {
+            background-color: green;
+        }
+    }
+
+    .bdr {
+        border: 2px solid black;
+        padding: 10px 23px;
+        background-color: wheat;
+    }
+
+    nav {
+        grid-area: navbar;
+    }
+
+    section {
+        grid-area: section;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+    footer {
+        grid-area: footer;
+        text-align: center;
+    }
+--------------------------------------------------------------------------------
